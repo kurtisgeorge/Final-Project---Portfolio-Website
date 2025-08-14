@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurt Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+ <main class="about-page">
+  <header class="header-hero crm-bg">
+        <div class="container header-row">
+        <a href="#" id="logo">
+            <img src="assets/Kurt.png" alt="Kurt George Logo">
+        </a>
+        <button class="menu-btn" id="menu-btn">
+            <img src="assets/hamburger.svg" alt="">
+        </button>
+        <nav class="menu" id="menu">
+            <div id="exit-btn">
+                <img src="assets/x-icon.svg" alt="exit">
+            </div>
+            <div class="slide-nav-links share-tech-regular">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+        <nav class="top-nav share-tech-regular">
+            <a href="index.html">HOME</a>
+            <a href="#work">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+        </div>
+    </header>
+  <section class="about-hero crm-bg">
+    <div class="wht-bg">
+    <h1 class="oswald">About Me</h1>
+    <p class="share-tech-regular">Hi, I’m Kurt — a web designer & developer passionate about building clean, functional, and visually engaging digital experiences.</p>
+    </div>
+  </section>
+
+  <section class="about-content container">
+    <div class="about-text grn-bg">
+        <div class="wht-bg">
+            <h2 class="oswald">My Story</h2>
+            <p class="share-tech-regular">I started my journey in design and development to combine creativity with problem-solving. Over time, I’ve worked on various projects ranging from personal portfolios to client websites.</p>
+            <p class="share-tech-regular">When I’m not coding, I enjoy photography, fitness, and exploring new places. My goal is to bring ideas to life through thoughtful design and efficient code.</p>
+        </div>
+    </div>
+
+    <div class="about-images">
+      <img src="assets/about/24FECAE0-AD20-4E95-AD9C-A764765952D9_1_105_c.jpeg" />
+      <img src="assets/about/26D69239-3070-45E7-8D26-EC72C850BEFB_1_105_c.jpeg" />
+      <img src="assets/about/D5D31D8F-3102-40D5-868B-115037A300A6_1_105_c.jpeg" />
+      <img src="assets/about/E0381C0F-96F0-49BD-920F-D1387E5D977B_1_105_c.jpeg" />
+    </div>
+  </section>
+</main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-nav-links share-tech-regular">
+        <a href="index.html">HOME</a>
+        <a href="#work">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- tiny js (optional) -->
+  <script>
+    const menuToggle = document.getElementById('menu-btn');
+    const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (event) => {
+        if (
+            menu.classList.contains('open') &&
+            !menu.contains(event.target) &&
+            !event.target.closest('#menu-btn')
+        ) {
+            menu.classList.remove('open');
+        }
+        });
+
+// Close menu when clicking the X button
+const exitBtn = document.getElementById('exit-btn');
+if (exitBtn) {
+  exitBtn.addEventListener('click', (e) => {
+    e.stopPropagation();       // optional, avoids outside-click handler firing first
+    menu.classList.remove('open');
+  });
+}
+  </script>
+</body>
+</html>

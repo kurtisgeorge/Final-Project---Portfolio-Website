@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kurt Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="home">
+  <header class="header-hero crm-bg">
+    <div class="container header-row">
+      <a href="#" id="logo">
+        <img src="assets/Kurt.png" alt="Kurt George Logo">
+      </a>
+      <button class="menu-btn" id="menu-btn">
+        <img src="assets/hamburger.svg" alt="">
+      </button>
+      <nav class="menu" id="menu">
+        <div id="exit-btn">
+            <img src="assets/x-icon.svg" alt="exit">
+        </div>
+        <div class="slide-nav-links share-tech-regular">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </div>
+      </nav>
+       <nav class="top-nav share-tech-regular">
+            <a href="index.html">HOME</a>
+            <a href="#work">WORK</a>
+            <a href="about.html">ABOUT</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </div>
+       
+     <section class="hero">
+        <h3 class="hero-intro oswald">HI THERE, I'M KURT</h3>
+        <div class="cta-container">
+            <div class="hero-cta">
+                <p class="share-tech-regular">Let’s build something together!</p>
+                <a href="#contact" class="cta-btn oswald">CONTACT ME</a>
+            </div>
+        </div>
+    </section>
+  </header>
+
+    <section class="grn-bg" id="objective">
+          <div class="card wht-bg">
+            <p class="share-tech-regular">“Front‑end development, photography, and visual storytelling — brought together through clean design and code.”</p>
+            <a href="#about" class="link share-tech-regular" id="read-more">Read more →</a>
+          </div>
+    </section>
+
+    <!-- tools -->
+    <section class="crm-bg" id="tools">
+      
+        <div class="card grn-bg">
+            <p class="share-tech-regular wht-txt">Below are the current tools and technologies I use throughout my design and development process:</p>
+        </div>
+    
+       
+
+        <div class="tools-grid">
+          <!-- replace icons -->
+          <img src="assets/figma-logo.svg" alt="Figma">
+          <img src="assets/indesign-logo.svg" alt="InDesign">
+          <img src="assets/illustrator-logo.svg" alt="Illustrator">
+          <img src="assets/lightroom-logo.svg" alt="Lightroom">
+          <img src="assets/css-logo.svg" alt="CSS">
+          <img src="assets/html5-logo.svg" alt="HTML">
+          <img src="assets/js-logo.svg" alt="JS">
+          <img src="assets/photoshop-logo.svg" alt="Photoshop">
+          <img src="assets/nodejs-logo.svg" alt="Node">
+          <img src="assets/shopify-logo.svg" alt="Shopify">
+          <img src="assets/tailwind-logo.svg" alt="Astro">
+          <img src="assets/react-logo.svg" alt="React">
+        </div>
+    </section>
+
+    <!-- banner -->
+    <section class="grn-bg">
+          <div class="card cente wht-bg">
+            <h2 class="oswald">CREATIVE OUTPUT</h2>
+          </div>
+    </section>
+
+    <!-- work -->
+    <section class="gallery">
+        <img src="assets/hardthreads-desktop.png">
+        <img src="assets/hardthreads-mobile.png">
+        <img src="assets/dirt-desktop.png"">
+        <img src="assets/bubble burst package with background.png">
+        <img src="assets/Screenshot 2025-03-17 at 8.49.53 AM.png">
+        <img src="assets/125A11BC-DA0F-4E95-AA40-ED624986D755.jpeg">
+        <img src="assets/16F15C31-73DE-4C50-895C-67D88C296FA6_1_102_o.jpeg">
+        <img src="assets/1AE0B925-AD2B-4EAD-94F8-4199E809BB3B_1_105_c.jpeg">
+        <img src="assets/60AA78D4-506D-4F47-A29D-09A5E607E433_4_5005_c.jpeg">
+        <img src="assets/A0125A31-382B-4FA5-8A48-ADAD02BA5A62_1_102_o.jpeg">
+        <img src="assets/Asset 8.png">
+        <img src="assets/E9B2EC8D-CFA3-4735-8487-B7A19F3F57E3.jpeg">
+        <img src="assets/EA88DAFD-AD13-4BED-9126-B61451521731_1_105_c.jpeg">
+        <img src="assets/F0DADA27-E65C-4A90-9754-7ECF573665BD.jpeg">
+        <img src="assets/Screenshot 2025-03-17 at 8.49.53 AM.png">
+    
+     </section>
+    <!-- contact strip -->
+    <section class="grn-bg" id="contact">
+          <div class="card">
+            <p class="wht-bg share-tech-regular">Questions? Ideas? Just want to say hey?</p>
+            <a href="contact.html" class="cta-btn oswald">LET'S GET IN TOUCH</a>
+          </div>
+    </section>
+
+  </main>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-nav-links share-tech-regular">
+        <a href="index.html">HOME</a>
+        <a href="#work">WORK</a>
+        <a href="about.html">ABOUT</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- tiny js (optional) -->
+  <script>
+    const menuToggle = document.getElementById('menu-btn');
+    const menu = document.querySelector('.menu');
+
+        menuToggle.addEventListener('click', () => {
+        menu.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (event) => {
+        if (
+            menu.classList.contains('open') &&
+            !menu.contains(event.target) &&
+            !event.target.closest('#menu-btn')
+        ) {
+            menu.classList.remove('open');
+        }
+        });
+
+// Close menu when clicking the X button
+const exitBtn = document.getElementById('exit-btn');
+if (exitBtn) {
+  exitBtn.addEventListener('click', (e) => {
+    e.stopPropagation();       // optional, avoids outside-click handler firing first
+    menu.classList.remove('open');
+  });
+}
+  </script>
+</body>
+</html>
