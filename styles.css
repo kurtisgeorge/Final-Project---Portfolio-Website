@@ -218,7 +218,11 @@ footer {
   .hero {
     height: 20rem;
   }
-  .cta-container { display: flex; align-items: center; justify-content: flex-end;
+  .cta-container { 
+    display: flex; 
+    align-items: center; 
+    justify-content: flex-end;
+    width: 65%;
  }
 
  .header-row {
