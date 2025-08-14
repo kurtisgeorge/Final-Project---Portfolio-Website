@@ -105,7 +105,7 @@
         <img src="assets/Screenshot 2025-03-17 at 8.49.53 AM.png">
     
      </section>
-    <!-- contact strip -->
+  
     <section class="grn-bg" id="contact">
           <div class="card">
             <p class="wht-bg share-tech-regular">Questions? Ideas? Just want to say hey?</p>
@@ -115,7 +115,7 @@
 
   </main>
 
-  <!-- footer -->
+
   <footer class="footer">
     <div class="container">
       <div class="footer-nav-links share-tech-regular">
@@ -127,33 +127,7 @@
     </div>
   </footer>
 
-  <!-- tiny js (optional) -->
-  <script>
-    const menuToggle = document.getElementById('menu-btn');
-    const menu = document.querySelector('.menu');
-
-        menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('open');
-        });
-
-        document.addEventListener('click', (event) => {
-        if (
-            menu.classList.contains('open') &&
-            !menu.contains(event.target) &&
-            !event.target.closest('#menu-btn')
-        ) {
-            menu.classList.remove('open');
-        }
-        });
-
-// Close menu when clicking the X button
-const exitBtn = document.getElementById('exit-btn');
-if (exitBtn) {
-  exitBtn.addEventListener('click', (e) => {
-    e.stopPropagation();       // optional, avoids outside-click handler firing first
-    menu.classList.remove('open');
-  });
-}
-  </script>
+ 
+  <script src="script.js"></script>
 </body>
 </html>
